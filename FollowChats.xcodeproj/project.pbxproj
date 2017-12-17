@@ -7,13 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		57A0AF28623DB24529083F0D /* Pods_FollowChatsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46E17DC190600E418695E01D /* Pods_FollowChatsTests.framework */; };
+		6D2B021330F735CD6CB4C230 /* Pods_FollowChats.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7999CFAF7A2E26648746C363 /* Pods_FollowChats.framework */; };
+		9B2B16EA1FE663A300C8AA58 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2B16E91FE663A300C8AA58 /* PostModel.swift */; };
+		9B2B16EF1FE6D92F00C8AA58 /* VideoPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2B16EE1FE6D92F00C8AA58 /* VideoPlayer.swift */; };
+		9BAAAB481FE583830004EC8D /* CornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAAAB471FE583830004EC8D /* CornerRadius.swift */; };
+		9BAAAB4A1FE584770004EC8D /* RoundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAAAB491FE584770004EC8D /* RoundImageView.swift */; };
+		9BAAAB521FE58AF70004EC8D /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAAAB511FE58AF70004EC8D /* DataManager.swift */; };
+		9BAAAB551FE597270004EC8D /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAAAB541FE597270004EC8D /* LoginModel.swift */; };
 		9BD44BBB1FE561810036A724 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD44BBA1FE561810036A724 /* AppDelegate.swift */; };
-		9BD44BBD1FE561810036A724 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD44BBC1FE561810036A724 /* FirstViewController.swift */; };
-		9BD44BBF1FE561810036A724 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD44BBE1FE561810036A724 /* SecondViewController.swift */; };
+		9BD44BBD1FE561810036A724 /* PostsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD44BBC1FE561810036A724 /* PostsTableViewController.swift */; };
 		9BD44BC21FE561810036A724 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BD44BC01FE561810036A724 /* Main.storyboard */; };
 		9BD44BC41FE561810036A724 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BD44BC31FE561810036A724 /* Assets.xcassets */; };
 		9BD44BC71FE561810036A724 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BD44BC51FE561810036A724 /* LaunchScreen.storyboard */; };
-		9BD44BD21FE561820036A724 /* FollowChatsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD44BD11FE561820036A724 /* FollowChatsTests.swift */; };
+		9BD44BDD1FE5665B0036A724 /* ImagePostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD44BDC1FE5665B0036A724 /* ImagePostCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,17 +34,27 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		46E17DC190600E418695E01D /* Pods_FollowChatsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FollowChatsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		524494AF62DA058A554D75BD /* Pods-FollowChatsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FollowChatsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FollowChatsTests/Pods-FollowChatsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7692B5600ECE332E7384CA88 /* Pods-FollowChats.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FollowChats.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FollowChats/Pods-FollowChats.debug.xcconfig"; sourceTree = "<group>"; };
+		7999CFAF7A2E26648746C363 /* Pods_FollowChats.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FollowChats.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B2B16E91FE663A300C8AA58 /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
+		9B2B16EE1FE6D92F00C8AA58 /* VideoPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoPlayer.swift; sourceTree = "<group>"; };
+		9BAAAB471FE583830004EC8D /* CornerRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerRadius.swift; sourceTree = "<group>"; };
+		9BAAAB491FE584770004EC8D /* RoundImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundImageView.swift; sourceTree = "<group>"; };
+		9BAAAB511FE58AF70004EC8D /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		9BAAAB541FE597270004EC8D /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		9BD44BB71FE561810036A724 /* FollowChats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FollowChats.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BD44BBA1FE561810036A724 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9BD44BBC1FE561810036A724 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		9BD44BBE1FE561810036A724 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		9BD44BBC1FE561810036A724 /* PostsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsTableViewController.swift; sourceTree = "<group>"; };
 		9BD44BC11FE561810036A724 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9BD44BC31FE561810036A724 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9BD44BC61FE561810036A724 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9BD44BC81FE561810036A724 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9BD44BCD1FE561820036A724 /* FollowChatsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FollowChatsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9BD44BD11FE561820036A724 /* FollowChatsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowChatsTests.swift; sourceTree = "<group>"; };
-		9BD44BD31FE561820036A724 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9BD44BDC1FE5665B0036A724 /* ImagePostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePostCell.swift; sourceTree = "<group>"; };
+		D6C8FAAB84EAA256EB03EECD /* Pods-FollowChats.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FollowChats.release.xcconfig"; path = "Pods/Target Support Files/Pods-FollowChats/Pods-FollowChats.release.xcconfig"; sourceTree = "<group>"; };
+		EAAAA9ACC7A48C4C528598DB /* Pods-FollowChatsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FollowChatsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FollowChatsTests/Pods-FollowChatsTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D2B021330F735CD6CB4C230 /* Pods_FollowChats.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,18 +70,96 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57A0AF28623DB24529083F0D /* Pods_FollowChatsTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		245897D2B5C16EFEAE58F6AA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7999CFAF7A2E26648746C363 /* Pods_FollowChats.framework */,
+				46E17DC190600E418695E01D /* Pods_FollowChatsTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9B2B16ED1FE6D91D00C8AA58 /* VideoPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				9B2B16EE1FE6D92F00C8AA58 /* VideoPlayer.swift */,
+			);
+			path = VideoPlayer;
+			sourceTree = "<group>";
+		};
+		9BAAAB4B1FE58A190004EC8D /* ImageView+UIViewCorner */ = {
+			isa = PBXGroup;
+			children = (
+				9BAAAB471FE583830004EC8D /* CornerRadius.swift */,
+				9BAAAB491FE584770004EC8D /* RoundImageView.swift */,
+			);
+			path = "ImageView+UIViewCorner";
+			sourceTree = "<group>";
+		};
+		9BAAAB4C1FE58A430004EC8D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9BD44BBC1FE561810036A724 /* PostsTableViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		9BAAAB4D1FE58A4D0004EC8D /* CustomCell */ = {
+			isa = PBXGroup;
+			children = (
+				9BD44BDC1FE5665B0036A724 /* ImagePostCell.swift */,
+			);
+			path = CustomCell;
+			sourceTree = "<group>";
+		};
+		9BAAAB4E1FE58A580004EC8D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9BD44BC01FE561810036A724 /* Main.storyboard */,
+				9BD44BC51FE561810036A724 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9BAAAB4F1FE58A650004EC8D /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				9BD44BBA1FE561810036A724 /* AppDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		9BAAAB501FE58AF70004EC8D /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				9BAAAB511FE58AF70004EC8D /* DataManager.swift */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		9BAAAB531FE5970B0004EC8D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9BAAAB541FE597270004EC8D /* LoginModel.swift */,
+				9B2B16E91FE663A300C8AA58 /* PostModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		9BD44BAE1FE561810036A724 = {
 			isa = PBXGroup;
 			children = (
 				9BD44BB91FE561810036A724 /* FollowChats */,
-				9BD44BD01FE561820036A724 /* FollowChatsTests */,
 				9BD44BB81FE561810036A724 /* Products */,
+				D1776575EDF2F916543D8F32 /* Pods */,
+				245897D2B5C16EFEAE58F6AA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,24 +175,29 @@
 		9BD44BB91FE561810036A724 /* FollowChats */ = {
 			isa = PBXGroup;
 			children = (
-				9BD44BBA1FE561810036A724 /* AppDelegate.swift */,
-				9BD44BBC1FE561810036A724 /* FirstViewController.swift */,
-				9BD44BBE1FE561810036A724 /* SecondViewController.swift */,
-				9BD44BC01FE561810036A724 /* Main.storyboard */,
+				9B2B16ED1FE6D91D00C8AA58 /* VideoPlayer */,
+				9BAAAB531FE5970B0004EC8D /* Model */,
+				9BAAAB501FE58AF70004EC8D /* DataManager */,
+				9BAAAB4F1FE58A650004EC8D /* AppDelegate */,
+				9BAAAB4E1FE58A580004EC8D /* View */,
+				9BAAAB4D1FE58A4D0004EC8D /* CustomCell */,
+				9BAAAB4C1FE58A430004EC8D /* Controller */,
+				9BAAAB4B1FE58A190004EC8D /* ImageView+UIViewCorner */,
 				9BD44BC31FE561810036A724 /* Assets.xcassets */,
-				9BD44BC51FE561810036A724 /* LaunchScreen.storyboard */,
 				9BD44BC81FE561810036A724 /* Info.plist */,
 			);
 			path = FollowChats;
 			sourceTree = "<group>";
 		};
-		9BD44BD01FE561820036A724 /* FollowChatsTests */ = {
+		D1776575EDF2F916543D8F32 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				9BD44BD11FE561820036A724 /* FollowChatsTests.swift */,
-				9BD44BD31FE561820036A724 /* Info.plist */,
+				7692B5600ECE332E7384CA88 /* Pods-FollowChats.debug.xcconfig */,
+				D6C8FAAB84EAA256EB03EECD /* Pods-FollowChats.release.xcconfig */,
+				524494AF62DA058A554D75BD /* Pods-FollowChatsTests.debug.xcconfig */,
+				EAAAA9ACC7A48C4C528598DB /* Pods-FollowChatsTests.release.xcconfig */,
 			);
-			path = FollowChatsTests;
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -106,9 +207,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9BD44BD61FE561820036A724 /* Build configuration list for PBXNativeTarget "FollowChats" */;
 			buildPhases = (
+				AFA5A8E53A201CFBBBD48003 /* [CP] Check Pods Manifest.lock */,
 				9BD44BB31FE561810036A724 /* Sources */,
 				9BD44BB41FE561810036A724 /* Frameworks */,
 				9BD44BB51FE561810036A724 /* Resources */,
+				DCD852490EE52F741047318B /* [CP] Embed Pods Frameworks */,
+				1EAEC986B5FCD434137878E4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -123,9 +227,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9BD44BD91FE561820036A724 /* Build configuration list for PBXNativeTarget "FollowChatsTests" */;
 			buildPhases = (
+				A89A18F9A6456AFFD76C54C6 /* [CP] Check Pods Manifest.lock */,
 				9BD44BC91FE561820036A724 /* Sources */,
 				9BD44BCA1FE561820036A724 /* Frameworks */,
 				9BD44BCB1FE561820036A724 /* Resources */,
+				5C73DF9E3C53119D6DAFA15E /* [CP] Embed Pods Frameworks */,
+				A09B101B45E11F1AC6430595 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -197,14 +304,135 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1EAEC986B5FCD434137878E4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FollowChats/Pods-FollowChats-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5C73DF9E3C53119D6DAFA15E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-FollowChatsTests/Pods-FollowChatsTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FollowChatsTests/Pods-FollowChatsTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A09B101B45E11F1AC6430595 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FollowChatsTests/Pods-FollowChatsTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A89A18F9A6456AFFD76C54C6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FollowChatsTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AFA5A8E53A201CFBBBD48003 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FollowChats-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DCD852490EE52F741047318B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-FollowChats/Pods-FollowChats-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Alamofire-SwiftyJSON/Alamofire_SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/KRActivityIndicatorView/KRActivityIndicatorView.framework",
+				"${BUILT_PRODUCTS_DIR}/KRProgressHUD/KRProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire_SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KRActivityIndicatorView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KRProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FollowChats/Pods-FollowChats-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9BD44BB31FE561810036A724 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9BD44BBF1FE561810036A724 /* SecondViewController.swift in Sources */,
+				9BAAAB481FE583830004EC8D /* CornerRadius.swift in Sources */,
+				9BD44BDD1FE5665B0036A724 /* ImagePostCell.swift in Sources */,
 				9BD44BBB1FE561810036A724 /* AppDelegate.swift in Sources */,
-				9BD44BBD1FE561810036A724 /* FirstViewController.swift in Sources */,
+				9BAAAB551FE597270004EC8D /* LoginModel.swift in Sources */,
+				9BD44BBD1FE561810036A724 /* PostsTableViewController.swift in Sources */,
+				9BAAAB4A1FE584770004EC8D /* RoundImageView.swift in Sources */,
+				9B2B16EF1FE6D92F00C8AA58 /* VideoPlayer.swift in Sources */,
+				9BAAAB521FE58AF70004EC8D /* DataManager.swift in Sources */,
+				9B2B16EA1FE663A300C8AA58 /* PostModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,7 +440,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9BD44BD21FE561820036A724 /* FollowChatsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,10 +582,13 @@
 		};
 		9BD44BD71FE561820036A724 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7692B5600ECE332E7384CA88 /* Pods-FollowChats.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V9ECRET98Q;
 				INFOPLIST_FILE = FollowChats/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = theiOSDeveloper.FollowChats;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -369,10 +599,13 @@
 		};
 		9BD44BD81FE561820036A724 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D6C8FAAB84EAA256EB03EECD /* Pods-FollowChats.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V9ECRET98Q;
 				INFOPLIST_FILE = FollowChats/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = theiOSDeveloper.FollowChats;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -383,10 +616,12 @@
 		};
 		9BD44BDA1FE561820036A724 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 524494AF62DA058A554D75BD /* Pods-FollowChatsTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)`";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V9ECRET98Q;
 				INFOPLIST_FILE = FollowChatsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = theiOSDeveloper.FollowChatsTests;
@@ -399,10 +634,12 @@
 		};
 		9BD44BDB1FE561820036A724 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EAAAA9ACC7A48C4C528598DB /* Pods-FollowChatsTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)`";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V9ECRET98Q;
 				INFOPLIST_FILE = FollowChatsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = theiOSDeveloper.FollowChatsTests;
