@@ -7,8 +7,6 @@
 //
 
 import UIKit
-import Alamofire
-import SwiftyJSON
 import Kingfisher
 import KRProgressHUD
 class PostsTableViewController: UITableViewController,UISearchBarDelegate {
