@@ -158,11 +158,8 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <view clipsSubviews="YES" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1VD-PE-WHm" customClass="VideoPlayer" customModule="FollowChats" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="104" width="359" height="211"/>
+                                                    <rect key="frame" x="0.0" y="103" width="359" height="212.5"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="211" id="4vs-ly-ppX"/>
-                                                    </constraints>
                                                 </view>
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -184,6 +181,7 @@
                                                 <constraint firstItem="5lW-NR-ZQV" firstAttribute="top" secondItem="BBg-b1-ftz" secondAttribute="top" constant="8" id="pfU-lF-Qft"/>
                                                 <constraint firstAttribute="bottom" secondItem="fVP-4q-1Ph" secondAttribute="bottom" id="sBs-31-7aK"/>
                                                 <constraint firstItem="5lW-NR-ZQV" firstAttribute="leading" secondItem="ECM-fB-aRc" secondAttribute="trailing" constant="8" id="uM6-tI-SkZ"/>
+                                                <constraint firstItem="1VD-PE-WHm" firstAttribute="top" secondItem="fVP-4q-1Ph" secondAttribute="top" id="xUX-4F-rqS"/>
                                                 <constraint firstAttribute="trailing" secondItem="fVP-4q-1Ph" secondAttribute="trailing" id="xso-Bp-eCG"/>
                                             </constraints>
                                             <userDefinedRuntimeAttributes>
@@ -286,7 +284,7 @@
                     <navigationItem key="navigationItem" id="nUh-PU-Z9c">
                         <nil key="title"/>
                         <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="h0o-NY-QT6">
-                            <rect key="frame" x="61.5" y="8" width="252" height="30"/>
+                            <rect key="frame" x="61.5" y="7" width="252" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <segments>
                                 <segment title="Text"/>

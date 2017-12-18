@@ -154,10 +154,10 @@ extension PostsTableViewController{
             let url  = URL(string:videoUrl!)
             cell.vframe?.alpha = 1
             cell.vframe?.videoUrl = url
-            //            cell.vframe?.shouldAutoplay = true
+            cell.vframe?.shouldAutoplay = true
             cell.vframe?.shouldAutoRepeat = true
             cell.vframe?.showsCustomControls = false
-            //            cell.vframe?.isMuted = true
+            cell.vframe?.isMuted = true
             cell.vframe?.isPlaying  = true
         }else{
             print("No ")
