@@ -139,10 +139,10 @@
                                                             <real key="value" value="25"/>
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                            <real key="value" value="2"/>
+                                                            <real key="value" value="3"/>
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                            <color key="value" red="0.1843137255" green="0.15686274510000001" blue="0.78823529410000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="value" red="0.10075559470000001" green="0.71382457020000001" blue="0.52957338089999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
@@ -205,13 +205,13 @@
                                                                 <constraint firstAttribute="width" constant="20" id="3GJ-u0-7BB"/>
                                                                 <constraint firstAttribute="height" constant="20" id="ltF-uy-RaI"/>
                                                             </constraints>
-                                                            <color key="tintColor" red="0.1843137255" green="0.15686274510000001" blue="0.78823529410000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="tintColor" red="0.10075559470000001" green="0.71382457020000001" blue="0.52957338089999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <state key="normal" image="like"/>
                                                         </button>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="69" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0l2-nh-14r">
                                                             <rect key="frame" x="36" y="0.0" width="20" height="20"/>
                                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
-                                                            <color key="textColor" red="0.1843137255" green="0.15686274510000001" blue="0.78823529410000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="textColor" red="0.10075559470000001" green="0.71382457020000001" blue="0.52957338089999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7WA-9v-GAh">
@@ -220,13 +220,13 @@
                                                                 <constraint firstAttribute="height" constant="20" id="qKT-zE-5sk"/>
                                                                 <constraint firstAttribute="width" constant="20" id="zWr-7H-l2X"/>
                                                             </constraints>
-                                                            <color key="tintColor" red="0.1843137255" green="0.15686274510000001" blue="0.78823529410000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="tintColor" red="0.10075559470000001" green="0.71382457020000001" blue="0.52957338089999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <state key="normal" image="chat"/>
                                                         </button>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="97" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5rw-Hd-oen">
                                                             <rect key="frame" x="108" y="0.0" width="20" height="20"/>
                                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
-                                                            <color key="textColor" red="0.1843137255" green="0.15686274510000001" blue="0.78823529410000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="textColor" red="0.10075559470000001" green="0.71382457020000001" blue="0.52957338089999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
@@ -268,7 +268,7 @@
                                     <outlet property="backView" destination="fVP-4q-1Ph" id="l84-4J-GTN"/>
                                     <outlet property="discrptionLbl" destination="DvY-WL-ubf" id="O8K-kQ-3RN"/>
                                     <outlet property="imageHiehgtConstraint" destination="J5f-sp-LXK" id="zAr-Pm-7gU"/>
-                                    <outlet property="nameLbl" destination="EDn-g6-K44" id="Iup-oZ-AAP"/>
+                                    <outlet property="nameLbl" destination="5lW-NR-ZQV" id="ZHd-t0-IoU"/>
                                     <outlet property="postText" destination="DvY-WL-ubf" id="Rxv-3f-2tt"/>
                                     <outlet property="profileImageView" destination="ECM-fB-aRc" id="GrY-CM-sXJ"/>
                                     <outlet property="timeLbl" destination="EDn-g6-K44" id="kpu-X2-swa"/>

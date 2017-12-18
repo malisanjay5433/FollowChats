@@ -80,6 +80,11 @@ extension PostsTableViewController{
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell2 = tableView.dequeueReusableCell(withIdentifier: "ImageCell", for: indexPath) as! ImagePostCell
+        let profileImageUrl = userinfo?.body.user.profile_img_url
+        let url = URL(string:profileImageUrl!)
+        cell2.profileImageView.kf.setImage(with:url, placeholder:UIImage(named:"placeholder"), options:nil, progressBlock: nil, completionHandler: nil)
+        cell2.nameLbl.text = userinfo?.body.user.name
+        
         if isSort == false{
             let userPost = self.post_Arr[indexPath.row]
             if userPost.type == "text"{
@@ -139,10 +144,10 @@ extension PostsTableViewController{
         }
         
         return cell2
-        
-        
-        
     }
+    
+}
+extension PostsTableViewController{
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.videoUrl = post_Arr[indexPath.row].media_url
         let indexPath = tableView.indexPathForSelectedRow
@@ -153,12 +158,18 @@ extension PostsTableViewController{
         if self.videoUrl != ""{
             let url  = URL(string:videoUrl!)
             cell.vframe?.alpha = 1
+            print(self.videoUrl!)
+            cell.vframe?.layer.cornerRadius = 3.0
+            cell.vframe?.layer.masksToBounds = true
             cell.vframe?.videoUrl = url
             cell.vframe?.shouldAutoplay = true
             cell.vframe?.shouldAutoRepeat = true
             cell.vframe?.showsCustomControls = false
             cell.vframe?.isMuted = true
             cell.vframe?.isPlaying  = true
+            cell.vframe?.layer.cornerRadius = 3.0
+            cell.vframe?.layer.masksToBounds = true
+            
         }else{
             print("No ")
         }
@@ -182,7 +193,8 @@ extension PostsTableViewController{
             break
         }
     }
-    func sortTextOrImageOrVideo(type:String) { //should probably be called sort and not filter
+    //  Filter the data from model,Image Text,Video
+    func sortTextOrImageOrVideo(type:String) {
         let filtredData = post_Arr.filter { $0.type == type}
         self.filtered = filtredData
         isSort = true
