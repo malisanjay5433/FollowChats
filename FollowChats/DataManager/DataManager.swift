@@ -6,6 +6,7 @@
 //  Copyright © 2017 Sanjay Mali. All rights reserved.
 //
 import Foundation
+import KRProgressHUD
 public final class DataManager {
     public static func getJSON(_ api:String,param:[String:[String:String]],completion:@escaping (_ data:Data?, _ error:Error?) -> Void){
         DispatchQueue.global(qos: .background).async {
@@ -23,6 +24,7 @@ public final class DataManager {
                 do{
                     if let er  = error  {
                         print("error = \(er.localizedDescription)")
+                        KRProgressHUD.dismiss()
                     }
                     
                     guard let mdata = data else {

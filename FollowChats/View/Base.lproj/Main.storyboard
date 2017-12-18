@@ -286,15 +286,16 @@
                     <navigationItem key="navigationItem" id="nUh-PU-Z9c">
                         <nil key="title"/>
                         <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="h0o-NY-QT6">
-                            <rect key="frame" x="61.5" y="7" width="252" height="30"/>
+                            <rect key="frame" x="61.5" y="8" width="252" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <segments>
                                 <segment title="Text"/>
                                 <segment title="Image"/>
+                                <segment title="Video"/>
                             </segments>
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
-                                <action selector="indexChanged:" destination="rkg-LY-aVw" eventType="touchUpInside" id="al3-zm-VwK"/>
+                                <action selector="indexChanged:" destination="rkg-LY-aVw" eventType="valueChanged" id="uFn-yC-rXb"/>
                             </connections>
                         </segmentedControl>
                     </navigationItem>

@@ -11,10 +11,11 @@ import Kingfisher
 import KRProgressHUD
 class PostsTableViewController: UITableViewController,UISearchBarDelegate {
     var post_Arr = [Posts_new]()
+    var filtered = [Posts_new]()
     var userinfo:LoginModel?
     var videoUrl:String?
     @IBOutlet var segmentedControl: UISegmentedControl!
-
+    var isSort = false
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.estimatedRowHeight = 44
@@ -71,26 +72,76 @@ extension PostsTableViewController{
     }
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return self.post_Arr.count
+        if isSort == true{
+            return self.filtered.count
+        }else{
+            return self.post_Arr.count
+        }
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let userPost = self.post_Arr[indexPath.row]
         let cell2 = tableView.dequeueReusableCell(withIdentifier: "ImageCell", for: indexPath) as! ImagePostCell
-        if userPost.type == "text"{
-            cell2.discrptionLbl.text = userPost.description
-            cell2.imageHiehgtConstraint.constant = 0
-        }else{
-            if (userPost.thumbnail_url != nil) && userPost.thumbnail_url != ""{
-                cell2.imageHiehgtConstraint.constant = 166
-                let url = URL(string:userPost.thumbnail_url!)
-                cell2.backView.kf.setImage(with:url, placeholder:UIImage(named:"placeholder"), options:nil, progressBlock: nil, completionHandler: nil)
+        if isSort == false{
+            let userPost = self.post_Arr[indexPath.row]
+            if userPost.type == "text"{
                 cell2.discrptionLbl.text = userPost.description
-            }else{
                 cell2.imageHiehgtConstraint.constant = 0
+            }else if userPost.type == "image"{
+                if (userPost.thumbnail_url != nil) && userPost.thumbnail_url != ""{
+                    cell2.imageHiehgtConstraint.constant = 166
+                    let url = URL(string:userPost.thumbnail_url!)
+                    cell2.backView.kf.setImage(with:url, placeholder:UIImage(named:"placeholder"), options:nil, progressBlock: nil, completionHandler: nil)
+                    cell2.discrptionLbl.text = userPost.description
+                }else{
+                    cell2.imageHiehgtConstraint.constant = 0
+                }
+                cell2.discrptionLbl.text = userPost.description
             }
-            cell2.discrptionLbl.text = userPost.description
+            else{
+                if (userPost.thumbnail_url != nil) && userPost.thumbnail_url != ""{
+                    cell2.imageHiehgtConstraint.constant = 166
+                    let url = URL(string:userPost.thumbnail_url!)
+                    cell2.backView.kf.setImage(with:url, placeholder:UIImage(named:"placeholder"), options:nil, progressBlock: nil, completionHandler: nil)
+                    cell2.discrptionLbl.text = userPost.description
+                }else{
+                    cell2.imageHiehgtConstraint.constant = 0
+                }
+                cell2.discrptionLbl.text = userPost.description
+            }
         }
+        else if isSort == true{
+            isSort = false
+            let userPost = self.filtered[indexPath.row]
+            if userPost.type == "text"{
+                cell2.discrptionLbl.text = userPost.description
+                cell2.imageHiehgtConstraint.constant = 0
+            }else if userPost.type == "image"{
+                if (userPost.thumbnail_url != nil) && userPost.thumbnail_url != ""{
+                    cell2.imageHiehgtConstraint.constant = 166
+                    let url = URL(string:userPost.thumbnail_url!)
+                    cell2.backView.kf.setImage(with:url, placeholder:UIImage(named:"placeholder"), options:nil, progressBlock: nil, completionHandler: nil)
+                    cell2.discrptionLbl.text = userPost.description
+                }else{
+                    cell2.imageHiehgtConstraint.constant = 0
+                }
+                cell2.discrptionLbl.text = userPost.description
+            }
+            else{
+                if (userPost.thumbnail_url != nil) && userPost.thumbnail_url != ""{
+                    cell2.imageHiehgtConstraint.constant = 166
+                    let url = URL(string:userPost.thumbnail_url!)
+                    cell2.backView.kf.setImage(with:url, placeholder:UIImage(named:"placeholder"), options:nil, progressBlock: nil, completionHandler: nil)
+                    cell2.discrptionLbl.text = userPost.description
+                }else{
+                    cell2.imageHiehgtConstraint.constant = 0
+                }
+                cell2.discrptionLbl.text = userPost.description
+            }
+        }
+        
         return cell2
+        
+        
+        
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.videoUrl = post_Arr[indexPath.row].media_url
@@ -103,10 +154,10 @@ extension PostsTableViewController{
             let url  = URL(string:videoUrl!)
             cell.vframe?.alpha = 1
             cell.vframe?.videoUrl = url
-//            cell.vframe?.shouldAutoplay = true
+            //            cell.vframe?.shouldAutoplay = true
             cell.vframe?.shouldAutoRepeat = true
             cell.vframe?.showsCustomControls = false
-//            cell.vframe?.isMuted = true
+            //            cell.vframe?.isMuted = true
             cell.vframe?.isPlaying  = true
         }else{
             print("No ")
@@ -115,29 +166,33 @@ extension PostsTableViewController{
     @IBAction func indexChanged(_ sender: AnyObject) {
         switch segmentedControl.selectedSegmentIndex{
         case 0:
-            print("First Segment Selected")
-            self.sortText()
+            print("Text")
+            self.sortTextOrImageOrVideo(type: "text")
+            break
         case 1:
-            print ("Second Segment Selected")
-            self.sortImageOrVideo()
+            print ("Image")
+            self.sortTextOrImageOrVideo(type: "image")
+            break
+            
+        case 2:
+            print ("Video")
+            self.sortTextOrImageOrVideo(type: "video")
+            break
         default:
             break
         }
     }
-    func sortText() { // should probably be called sort and not filter
-        let data = post_Arr.filter { $0.type == "Text" }
-        self.post_Arr = data
+    func sortTextOrImageOrVideo(type:String) { //should probably be called sort and not filter
+        let filtredData = post_Arr.filter { $0.type == type}
+        self.filtered = filtredData
+        isSort = true
         DispatchQueue.main.async {
             self.tableView.reloadData()
+            print("filtredData:\(filtredData.count)")
+            self.navigationItem.title = "\(self.filtered.count) Posts"
         }
     }
-    func sortImageOrVideo() { // should probably be called sort and not filter
-        let data = post_Arr.filter { $0.type == "Video" || $0.type == "image"}
-        self.post_Arr = data
-        DispatchQueue.main.async {
-            self.tableView.reloadData()
-        }
-    }
+    
 }
 
 
