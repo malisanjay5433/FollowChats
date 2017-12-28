@@ -40,16 +40,16 @@ class PostsTableViewController: UITableViewController,UISearchBarDelegate {
         
     }
     
-
+    
     func fetchData(){
         DispatchQueue.main.async(execute: { () -> Void in
-                let post = PersistanceService.FetchRequest()
-                self.coreData = post
-                self.tableView.reloadData()
-                KRProgressHUD.dismiss()
-//                self.navigationItem.title = "\(self.coreData.count) Posts"
-
-            })
+            let post = PersistanceService.FetchRequest()
+            self.coreData = post
+            self.tableView.reloadData()
+            KRProgressHUD.dismiss()
+            //                self.navigationItem.title = "\(self.coreData.count) Posts"
+            
+        })
     }
     private func downloadJSON(){
         KRProgressHUD.show()
@@ -93,27 +93,27 @@ class PostsTableViewController: UITableViewController,UISearchBarDelegate {
                     }
                     if i.post_id != nil{
                         coredata.post_id = i.post_id
-
+                        
                     }else{
                         //                        coredata.post_id = ""
                     }
                     if i.description != nil{
                         coredata.textDescrption = i.description
-
+                        
                     }else{
                         //                        coredata.textDescrption = ""
                     }
-
+                    
                     if i.thumbnail_url != nil{
                         coredata.thumbnail_url = i.thumbnail_url
-
+                        
                     }else{
                         //                        coredata.thumbnail_url = ""
                     }
-
+                    
                     if i.type != nil{
                         coredata.type = i.type
-
+                        
                     }else{
                         //                        coredata.type = ""
                     }
@@ -150,133 +150,73 @@ extension PostsTableViewController{
         }
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell2 = tableView.dequeueReusableCell(withIdentifier: "ImageCell", for: indexPath) as! ImagePostCell
-        let profileImageUrl = userinfo?.body.user.profile_img_url
-        //        let url = URL(string:profileImageUrl!)
-        //        cell2.profileImageView.kf.setImage(with:url, placeholder:UIImage(named:"placeholder"), options:nil, progressBlock: nil, completionHandler: nil)
-        cell2.nameLbl.text = userinfo?.body.user.name
-        if searchActive ==  true{
-            let userPost = self.filtered[indexPath.row]
-            if  filtered.count == 0{
-                cell2.discrptionLbl.text = userPost.textDescrption
+        var cell2:ImagePostCell  = tableView.dequeueReusableCell(withIdentifier: "ImageCell", for: indexPath) as! ImagePostCell
+        
+        if cell2 != nil {
+            let profileImageUrl = userinfo?.body.user.profile_img_url
+            let url = URL(string:profileImageUrl!)
+            cell2.profileImageView.kf.setImage(with:url, placeholder:UIImage(named:"placeholder"), options:nil, progressBlock: nil, completionHandler: nil)
+            cell2.nameLbl.text = userinfo?.body.user.name
+            
+            if searchActive ==  true{
+                let userPost = self.filtered[indexPath.row]
+                if  filtered.count == 0{
+                    cell2.discrptionLbl.text = userPost.textDescrption
+                }else{
+                    cell2.discrptionLbl.text = userPost.textDescrption
+                    if (userPost.thumbnail_url != nil) && userPost.thumbnail_url != ""{
+                        cell2.imageHiehgtConstraint.constant = 300
+                        let url = URL(string:userPost.thumbnail_url!)
+                        cell2.backView.kf.setImage(with:url, placeholder:UIImage(named:"placeholder"), options:nil, progressBlock: nil, completionHandler: nil)
+                    }else{
+                        cell2.imageHiehgtConstraint.constant = 0
+                    }
+                    
+                }
+                return cell2
             }else{
+                let userPost = self.coreData[indexPath.row]
                 cell2.discrptionLbl.text = userPost.textDescrption
                 if (userPost.thumbnail_url != nil) && userPost.thumbnail_url != ""{
-                    cell2.imageHiehgtConstraint.constant = 166
+                    cell2.imageHiehgtConstraint.constant = 300
                     let url = URL(string:userPost.thumbnail_url!)
                     cell2.backView.kf.setImage(with:url, placeholder:UIImage(named:"placeholder"), options:nil, progressBlock: nil, completionHandler: nil)
                 }else{
                     cell2.imageHiehgtConstraint.constant = 0
                 }
-                
-            }
-            return cell2
-        }else{
-            let userPost = self.coreData[indexPath.row]
-            cell2.discrptionLbl.text = userPost.textDescrption
-            if (userPost.thumbnail_url != nil) && userPost.thumbnail_url != ""{
-                cell2.imageHiehgtConstraint.constant = 166
-                let url = URL(string:userPost.thumbnail_url!)
-                cell2.backView.kf.setImage(with:url, placeholder:UIImage(named:"placeholder"), options:nil, progressBlock: nil, completionHandler: nil)
-            }else{
-                cell2.imageHiehgtConstraint.constant = 0
             }
         }
-        
-        
-        
-        //        if isSort == false{
-        //            let userPost = self.coreData[indexPath.row]
-        //            cell2.discrptionLbl.text = userPost.textDescrption
-        //
-        //
-        ////            if userPost.type == "text"{
-        ////                cell2.discrptionLbl.text = userPost.description
-        ////                cell2.imageHiehgtConstraint.constant = 0
-        ////            }else if userPost.type == "image"{
-        ////                if (userPost.thumbnail_url != nil) && userPost.thumbnail_url != ""{
-        ////                    cell2.imageHiehgtConstraint.constant = 166
-        ////                    let url = URL(string:userPost.thumbnail_url!)
-        ////                    cell2.backView.kf.setImage(with:url, placeholder:UIImage(named:"placeholder"), options:nil, progressBlock: nil, completionHandler: nil)
-        ////                    cell2.discrptionLbl.text = userPost.textDescrption
-        ////                }else{
-        ////                    cell2.imageHiehgtConstraint.constant = 0
-        ////                }
-        ////                cell2.discrptionLbl.text = userPost.textDescrption
-        //            }
-        //            else{
-        //                if (userPost.thumbnail_url != nil) && userPost.thumbnail_url != ""{
-        //                    cell2.imageHiehgtConstraint.constant = 166
-        //                    let url = URL(string:userPost.thumbnail_url!)
-        //                    cell2.backView.kf.setImage(with:url, placeholder:UIImage(named:"placeholder"), options:nil, progressBlock: nil, completionHandler: nil)
-        //                    cell2.discrptionLbl.text = userPost.description
-        //                }else{
-        //                    cell2.imageHiehgtConstraint.constant = 0
-        //                }
-        //                cell2.discrptionLbl.text = userPost.description
-        //            }
-        //        }
-        //        else if isSort == true{
-        //            isSort = false
-        //            let userPost = self.filtered[indexPath.row]
-        //            if userPost.type == "text"{
-        //                cell2.discrptionLbl.text = userPost.description
-        //                cell2.imageHiehgtConstraint.constant = 0
-        //            }else if userPost.type == "image"{
-        //                if (userPost.thumbnail_url != nil) && userPost.thumbnail_url != ""{
-        //                    cell2.imageHiehgtConstraint.constant = 166
-        //                    let url = URL(string:userPost.thumbnail_url!)
-        //                    cell2.backView.kf.setImage(with:url, placeholder:UIImage(named:"placeholder"), options:nil, progressBlock: nil, completionHandler: nil)
-        //                    cell2.discrptionLbl.text = userPost.description
-        //                }else{
-        //                    cell2.imageHiehgtConstraint.constant = 0
-        //                }
-        //                cell2.discrptionLbl.text = userPost.description
-        //            }
-        //            else{
-        //                if (userPost.thumbnail_url != nil) && userPost.thumbnail_url != ""{
-        //                    cell2.imageHiehgtConstraint.constant = 166
-        //                    let url = URL(string:userPost.thumbnail_url!)
-        //                    cell2.backView.kf.setImage(with:url, placeholder:UIImage(named:"placeholder"), options:nil, progressBlock: nil, completionHandler: nil)
-        //                    cell2.discrptionLbl.text = userPost.description
-        //                }else{
-        //                    cell2.imageHiehgtConstraint.constant = 0
-        //                }
-        //                cell2.discrptionLbl.text = userPost.description
-        //            }
-        //        }
-        
         return cell2
     }
     
 }
 extension PostsTableViewController{
-    //    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    //        self.videoUrl = post_Arr[indexPath.row].media_url
-    //        let indexPath = tableView.indexPathForSelectedRow
-    //        let cell = tableView.cellForRow(at: indexPath!)! as! ImagePostCell
-    //        if cell.vframe?.isPlaying == true || self.videoUrl == "" || self.videoUrl == nil {
-    //            return
-    //        }
-    //        if self.videoUrl != ""{
-    //            let url  = URL(string:videoUrl!)
-    //            cell.vframe?.alpha = 1
-    //            print(self.videoUrl!)
-    //            cell.vframe?.layer.cornerRadius = 3.0
-    //            cell.vframe?.layer.masksToBounds = true
-    //            cell.vframe?.videoUrl = url
-    //            cell.vframe?.shouldAutoplay = true
-    //            cell.vframe?.shouldAutoRepeat = true
-    //            cell.vframe?.showsCustomControls = false
-    //            cell.vframe?.isMuted = true
-    //            cell.vframe?.isPlaying  = true
-    //            cell.vframe?.layer.cornerRadius = 3.0
-    //            cell.vframe?.layer.masksToBounds = true
-    //
-    //        }else{
-    //            print("No ")
-    //        }
-    //    }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let url = post_Arr[indexPath.row].media_url
+        print("url:\(String(describing: url))")
+        let indexPath = tableView.indexPathForSelectedRow
+        let cell = tableView.cellForRow(at: indexPath!)! as! ImagePostCell
+        if cell.vframe?.isPlaying == true || url == "" || url == nil {
+            return
+        }
+        if let url = url {
+            let url  = URL(string:url)
+            cell.vframe?.alpha = 1
+            cell.vframe?.layer.cornerRadius = 3.0
+            cell.vframe?.layer.masksToBounds = true
+            cell.vframe?.videoUrl = url
+            cell.vframe?.shouldAutoplay = true
+            cell.vframe?.shouldAutoRepeat = false
+            cell.vframe?.showsCustomControls = false
+            cell.vframe?.isMuted = true
+            cell.vframe?.isPlaying  = true
+            cell.vframe?.layer.cornerRadius = 3.0
+            cell.vframe?.layer.masksToBounds = true
+        }
+        else{
+            print("No ")
+        }
+    }
     @IBAction func indexChanged(_ sender: AnyObject) {
         switch segmentedControl.selectedSegmentIndex{
         case 0:
@@ -345,3 +285,11 @@ extension  PostsTableViewController{
     }
 }
 
+public extension UITableView {
+    func indexPathForView(_ view: UIView) -> IndexPath? {
+        let origin = view.bounds.origin
+        let viewOrigin = self.convert(origin, from: view)
+        let indexPath = self.indexPathForRow(at: viewOrigin)
+        return indexPath
+    }
+}
