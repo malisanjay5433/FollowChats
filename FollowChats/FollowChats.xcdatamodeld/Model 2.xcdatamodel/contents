@@ -3,11 +3,12 @@
     <entity name="Table_V1" representedClassName="Table_V1" syncable="YES" codeGenerationType="class">
         <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="post_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="social_network_userid" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="textDescrption" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="thumbnail_url" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Table_V1" positionX="-63" positionY="18" width="128" height="120"/>
+        <element name="Table_V1" positionX="-63" positionY="18" width="128" height="135"/>
     </elements>
 </model>

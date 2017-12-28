@@ -45,10 +45,9 @@ class PostsTableViewController: UITableViewController,UISearchBarDelegate {
         DispatchQueue.main.async(execute: { () -> Void in
                 let post = PersistanceService.FetchRequest()
                 self.coreData = post
-                print("Before:\(self.coreData.count)")
                 self.tableView.reloadData()
                 KRProgressHUD.dismiss()
-                self.navigationItem.title = "\(self.coreData.count) Posts"
+//                self.navigationItem.title = "\(self.coreData.count) Posts"
 
             })
     }
@@ -118,6 +117,10 @@ class PostsTableViewController: UITableViewController,UISearchBarDelegate {
                     }else{
                         //                        coredata.type = ""
                     }
+                    if i.social_network_userid != nil{
+                        coredata.social_network_userid = i.social_network_userid
+                    }else{
+                    }
                     PersistanceService.saveContext()
                     self.fetchData()
                 }
@@ -128,8 +131,6 @@ class PostsTableViewController: UITableViewController,UISearchBarDelegate {
                 self.tableView.reloadData()
                 KRProgressHUD.dismiss()
             }
-            
-
         }
     }
 }

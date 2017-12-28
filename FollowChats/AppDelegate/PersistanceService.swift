@@ -16,6 +16,8 @@ class PersistanceService {
     
 //    var managedObjectContext = NSManagedObjectContext(concurrencyType: .privateQueueConcurrencyType)
     static var context: NSManagedObjectContext {
+        
+        
         return persistentContainer.viewContext
     }
     
@@ -43,11 +45,24 @@ class PersistanceService {
              */
             fatalError("Unresolved error \(error), \(error.userInfo)")
         }
+        
+        let description = NSPersistentStoreDescription()
+        description.shouldInferMappingModelAutomatically = true
+        description.shouldMigrateStoreAutomatically = true
+        description.shouldAddStoreAsynchronously = true
+        container.persistentStoreDescriptions = [description]
+//        container.addPersistentStore(with: persistentStoreDescription, completionHandler: { (persistentStoreDescription, error) in
+//            if let error = error {
+//                print("Unable to Add Persistent Store")
+//                print("\(error.localizedDescription)")
+//            }
+//        })
     })
     print("container:\(container)")
     return container
 }()
 
+    
 // MARK: - Core Data Saving support
 
 static func saveContext () {

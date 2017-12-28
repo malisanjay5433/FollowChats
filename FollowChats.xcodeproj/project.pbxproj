@@ -45,6 +45,7 @@
 		9B2B16EE1FE6D92F00C8AA58 /* VideoPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoPlayer.swift; sourceTree = "<group>"; };
 		9B364BCB1FEF7D98008F6FEE /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		9B364BD51FEF848E008F6FEE /* PersistanceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistanceService.swift; sourceTree = "<group>"; };
+		9B5D790E1FF4E1E100A91BCE /* Model 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Model 2.xcdatamodel"; sourceTree = "<group>"; };
 		9BAAAB471FE583830004EC8D /* CornerRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerRadius.swift; sourceTree = "<group>"; };
 		9BAAAB491FE584770004EC8D /* RoundImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundImageView.swift; sourceTree = "<group>"; };
 		9BAAAB511FE58AF70004EC8D /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
@@ -692,9 +693,10 @@
 		9B364BCA1FEF7D98008F6FEE /* FollowChats.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				9B5D790E1FF4E1E100A91BCE /* Model 2.xcdatamodel */,
 				9B364BCB1FEF7D98008F6FEE /* Model.xcdatamodel */,
 			);
-			currentVersion = 9B364BCB1FEF7D98008F6FEE /* Model.xcdatamodel */;
+			currentVersion = 9B5D790E1FF4E1E100A91BCE /* Model 2.xcdatamodel */;
 			path = FollowChats.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
